@@ -5,27 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Document</title>
+    <title>PWA</title>
     <link rel="manifest" href="./manifest.json">
     <style>
         html, body {
             padding:0;
             margin:0;
         }
-        body {
+        main {
+            height:100vh;
+            width:100vw;
             background-color: #546AD9;
-            padding:60px 20px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
         }
         h1 {
             text-align: center;
             color:#fff;
             font-family: sans-serif;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
+            font-size: 6rem;
+            text-shadow: 2px 2px 12px #2A377C;
         }
     </style>
 </head>
 <body>
-    <h1>PROMO</h1>
+    <main>
+        <h1>PWA</h1>
+    </main>
     <script src="./serviceworker.js"></script>
 </body>
 </html>

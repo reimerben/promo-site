@@ -1,25 +1,10 @@
-// if ('serviceWorker' in navigator) {
-//     navigator.serviceWorker.register("./serviceworker.js");
-//  }
-
-// const urlsToCache = ["/", "app.js", "styles.css", "logo.svg"];
-
-// self.addEventListener("install", event => {
-//    event.waitUntil(
-//       caches.open("pwa-assets").then(cache => {
-//          return cache.addAll(urlsToCache);
-//       });
-//    );
-// });
+//Service Worker example modified from ngokevin
+// https://gist.github.com/ngokevin/7eb03d90987c0ed03b873530c3b4c53c
 
 
+let VERSION = 'v1';
 
-
-
-
-var VERSION = 'v1';
-
-var cacheFirstFiles = [
+let cacheFirstFiles = [
   // ADDME: Add paths and URLs to pull from cache first if it has been loaded before. Else fetch from network.
   // If loading from cache, fetch from network in the background to update the resource. Examples:
   "./index.html",
@@ -29,16 +14,16 @@ var cacheFirstFiles = [
   "./images/icons-vector.svg"
 ];
 
-var networkFirstFiles = [
+let networkFirstFiles = [
   // ADDME: Add paths and URLs to pull from network first. Else fall back to cache if offline. Examples:
   // 'index.html',
   // 'build/build.js',
   // 'css/index.css'
 ];
 
-// Below is the service worker code.
+// Service worker code.
 
-var cacheFiles = cacheFirstFiles.concat(networkFirstFiles);
+let cacheFiles = cacheFirstFiles.concat(networkFirstFiles);
 
 self.addEventListener('install', event => {
   event.waitUntil(

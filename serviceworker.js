@@ -1,10 +1,6 @@
 //Service Worker example modified from ngokevin
 // https://gist.github.com/ngokevin/7eb03d90987c0ed03b873530c3b4c53c
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register("/serviceworker.js");
-}
-
 let VERSION = 'v1';
 
 let cacheFirstFiles = [

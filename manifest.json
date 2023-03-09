@@ -6,6 +6,7 @@
   "display": "fullscreen",
   "background_color": "#fff",
   "description": "A really cool PWA",
+  "theme_color" : "#546AD9",
   "icons": [
     {
       "src": "./images/icons-vector.svg",
